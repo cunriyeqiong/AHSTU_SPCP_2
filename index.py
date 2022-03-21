@@ -24,8 +24,8 @@ def push(key, title, content):  # 函数用来发送填报失败信息
 def login():
     userinfo = os.getenv('USERINFO')
     # userinfo格式 = """{
-    #     "user": "123456789",
-    #     "password": "123456789",
+    #     "user": "1378200018",
+    #     "password": "221532",
     #     "send_key": "123456789"
     #     }"""
     global send_key
@@ -61,7 +61,7 @@ def login():
 
     try:
         # 登录账号，获取cookies
-        response_login = session.post('http://xgb.ahstu.edu.cn/SPCP/Web/', data=data, verify=False,
+        response_login = session.post('http://xg.fjsdxy.com/SPCP/Web/', data=data, verify=False,
                                       allow_redirects=False)
     except:
         print('疫情填报登录失败，请检查平台是否能正常访问！')
